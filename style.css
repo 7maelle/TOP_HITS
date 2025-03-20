@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    color: #ad0808; /* Texte en blanc pour contraster */
+    /*background-image: url("blanc.jpg");*/
+    background-size: cover;
+    padding: 20px 0; /* Ajoute un peu d'espace autour du texte */
+    transition: opacity ease-in-out 0.5s;
+}
+
+header:hover{
+    opacity: 0.6;
+}
+
+header a {
+    position: absolute;
+    left: 20px; /* Positionne "Home" à gauche */
+}
+
+header a:hover {
+    position: absolute;
+    left: 20px; /* Positionne "Home" à gauche */
+    cursor: pointer;
+}
+
+
+
+section {
+    height: 100vh; /* Chaque section prend 100% de la hauteur de l'écran */
+    display: flex;
+    /*align-items: center;
+    justify-content: center;*/
+    text-align: center;
+    font-size: 2rem;
+}
+
+.premSection {
+    background: rgb(207,35,61);
+    background: linear-gradient(101deg, rgba(207,35,61,1) 0%, rgba(237,148,29,1) 47%, rgba(233,244,8,1) 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.presentation {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.presentation h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.presentation p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+
+.impo {
+    display: inline-block;
+    color: #7d0707;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: translateY(0);
+}
+.impo:hover {
+    transform: translateY(-5px); /* ajustez la valeur selon vos besoins */
+}
+
+.contenu {
+    display: flex;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+}
+
+.carte {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.pres {
+    width: 50%;/* Prend 50% de la largeur */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Garde le texte centré verticalement */
+
+    text-align: left; /* Aligne le texte à gauche */
+    background-color: #fff; /* Fond blanc */
+    padding: 20px;
+
+}
+
+.descri{
+    align-items: flex-start; /* Aligne le contenu à gauche */
+    font-size: 20px;
+    line-height: 1.7;
+    font-family: Century;
+}
+
+.nomCarte {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px; /* Espacement des lettres */
+    margin: 0px 0px 40px 0px;
+    position: relative;
+    color: #333;
+    overflow: hidden; /* Cache le texte qui dépasse au début de l'animation */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    border-right: 4px solid #ff5733; /* Crée un curseur comme une machine à écrire */
+    width: 0; /* Commence avec une largeur de 0 */
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Animation */
+}
+
+/* Animation de la machine à écrire */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Animation du curseur qui clignote */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Effets appliqués à la classe .val */
+.val {
+    display: inline-block;
+    color: #ff5733; /* Orange vif */
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s ease-in-out; /* Animation fluide */
+}
+
+.val::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Épaisseur de la ligne */
+    background-color: #ff5733;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.val:hover::before {
+    transform: scaleX(1); /* Surlignage au survol */
+    transform-origin: bottom left;
+}
+
+.val:hover {
+    transform: translateY(-5px); /* Effet de déplacement */
+}
+
+#pikaC{
+    background-color: orange;
+}
+
